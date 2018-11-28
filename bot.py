@@ -13,7 +13,7 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-updater = Updater(token=bot_settings.BOT_TOKEN)
+updater = Updater(token=settings.BOT_TOKEN)
 dispatcher = updater.dispatcher
 
 def start(bot, update):
