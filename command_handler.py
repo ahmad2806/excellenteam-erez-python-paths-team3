@@ -1,6 +1,8 @@
 import controller
 
+
 def run_command(m_command):
+    print("in run command")
     if m_command == 1:
         controller.create_filters()
     elif m_command == 2:

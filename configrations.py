@@ -9,3 +9,5 @@ commands = """
 threads_number = ""
 
 chunck = ""
+
+image_path = ""

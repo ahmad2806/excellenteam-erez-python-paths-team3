@@ -8,4 +8,4 @@
 def parse(user_command):
     # after parsing
 
-    return None
+    return 1
