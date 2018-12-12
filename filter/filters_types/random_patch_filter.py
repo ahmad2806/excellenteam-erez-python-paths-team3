@@ -1,6 +1,6 @@
-import filter.filter as filter
+import filter.path_filter as filter
 
-class RandomPatch(filter.Filter):
+class RandomPatch(filter.path_filter):
 
     def __init__(self):
         pass

@@ -10,8 +10,6 @@ def get_df():
     global check
     if check:
         df = file_handler.load_file("/Users/odaiodeh/PycharmProjects/path_project_prep/mypkl.pkl.xz")
-        # df['time'] = pa.to_datetime(df['time'])
-        # print(type(df['time'][0]))
         check = False
 
 

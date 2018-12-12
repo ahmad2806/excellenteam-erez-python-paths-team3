@@ -8,4 +8,13 @@
 def parse(user_command):
     # after parsing
 
-    return 1
+    if user_command == '1':
+        return 1
+    elif user_command == '2':
+        return 2
+    elif user_command == '3':
+        return 3
+    elif user_command == '4':
+        return 4
+    elif user_command == '5':
+        return 5

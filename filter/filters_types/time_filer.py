@@ -1,14 +1,14 @@
 import pandas as pa
+import filter.path_filter as filter
 
-
-class Time_filter():
+class Time_filter(filter.path_filter):
 
     def __init__(self, from_time, to_time, date):
         self.from_time = from_time
         self.to_time = to_time
+        self.name = "Time - Date filter"
         if date == '0':
             self.date = 0
-            print("hi")
         else:
             self.date = pa.to_datetime(date)
 
@@ -20,3 +20,6 @@ class Time_filter():
                 df.time.dt.hour.between(int(self.from_time), int(self.to_time)) & (df.time.dt.date == self.date.date())]
 
         return tf
+
+    def print(self):
+        print( f"name : {self.name} , from : {self.from_time} , to : {self.to_time}")

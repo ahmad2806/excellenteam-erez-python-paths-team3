@@ -1,5 +1,5 @@
 
-class sp(filter):
+class Sepecific_path_filter(filter.path_filter):
 
     def __init__(self):
         pass
