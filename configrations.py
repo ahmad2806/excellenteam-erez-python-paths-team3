@@ -10,4 +10,4 @@ threads_number = ""
 
 chunck = ""
 
-image_path = ""
+image_path = "/Users/odaiodeh/Downloads/paths0.png"

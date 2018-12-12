@@ -1,4 +1,3 @@
-from configrations import commands
 from m_parser import parse_command as p
 import command_handler
 
@@ -16,7 +15,6 @@ def run(m_command):
 
 
 def main():
-    print(commands)
     print("in main")
     while 1:
         my_command = get_command()

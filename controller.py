@@ -9,8 +9,8 @@ def create_filters():
 
     filters = input("insert filters: ").split(",")
     filter_list = filter_handler.get_filters(filters)
-    pathes = fetch_combined_query.combine_query_get_pathes_from_db(filter_list)
-    display_handler.use_display(pathes)
+    pathes,objs = fetch_combined_query.combine_query_get_pathes_from_db(filter_list)
+    display_handler.use_display(pathes,objs)
 
 
 def display_filters():
