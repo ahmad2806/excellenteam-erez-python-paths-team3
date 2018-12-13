@@ -1,6 +1,6 @@
 import display.display as display
 from pylab import *
-from configrations import image_path
+import configrations
 
 
 class DisplayDefualt(display.Display):
@@ -9,15 +9,11 @@ class DisplayDefualt(display.Display):
         pass
 
     def display(self, pathes, objs):
-        print("in display defualt")
-        bg = imread(image_path)
+        bg = imread(configrations.image_path)
         imshow(bg)
-        # print(pathes)
-        # print(objs)
-        # sample_objs = objs[objs > 50].sample(100)
-
-        for t, n in objs.iteritems():
+        for t, n in objs[objs > 50].iteritems():
             o = pathes.loc[t]
             plt.plot(o.x, o.y, label=n)
-        show()
-        pass
+        show(block=False)
+        input("press any key to continue\n")
+        plt.close()

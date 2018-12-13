@@ -16,5 +16,3 @@ def parse(user_command):
         return 3
     elif user_command == '4':
         return 4
-    elif user_command == '5':
-        return 5

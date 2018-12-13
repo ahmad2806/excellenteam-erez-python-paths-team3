@@ -2,10 +2,10 @@ import display.display_defualt as display_defualt
 import display.display_steps as display_steps
 
 
-def use_display(pathes,objs, mode=1):
-    print("in display handler")
-
+def use_display(pathes, objs):
+    mode = input("press 1 for normal display mode \npress 2 for display step mode\n")
+    mode = int(mode)
     if mode == 1:
-        display_defualt.DisplayDefualt().display(pathes,objs)
-    else:
-        display_steps.DisplaySteps()
+        display_defualt.DisplayDefualt().display(pathes, objs)
+    elif mode == 2:
+        display_steps.DisplaySteps().display(pathes, objs)

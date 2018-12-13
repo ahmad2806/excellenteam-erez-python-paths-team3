@@ -1,5 +1,6 @@
 from data import file_handler
 import pandas as pa
+import configrations
 
 df = None
 check = True
@@ -9,7 +10,7 @@ def get_df():
     global df
     global check
     if check:
-        df = file_handler.load_file("/Users/odaiodeh/PycharmProjects/path_project_prep/mypkl.pkl.xz")
+        df = file_handler.load_file(configrations.file_path)
         check = False
 
 

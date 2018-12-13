@@ -22,4 +22,7 @@ class Time_filter(filter.path_filter):
         return tf
 
     def print(self):
-        print( f"name : {self.name} , from : {self.from_time} , to : {self.to_time}")
+        if self.date == 0:
+            print(f"name : {self.name} \n from : {self.from_time} \n to : {self.to_time}\n all dates\n")
+        else:
+            print( f"name : {self.name} \n from : {self.from_time} \n to : {self.to_time}\n date : {self.date.date()}\n")
