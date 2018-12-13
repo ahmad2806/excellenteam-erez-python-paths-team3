@@ -1,5 +1,6 @@
 from data import file_handler
 import pandas as pa
+import configrations
 
 df = None
 check = True
@@ -9,7 +10,7 @@ def get_df():
     global df
     global check
     if check:
-        df = file_handler.load_file("/Users/odaiodeh/PycharmProjects/path_project_prep/mypkl.pkl.xz")
+        df = file_handler.load_file(configrations.file_path)
         check = False
 
 
@@ -18,7 +19,6 @@ def get_pathes(filter_list):
     ##get data df from csv
     get_df()
     local_df = df.copy()
-
     ##all filters
     for filter in filter_list:
         ## df on filters , df will get changed
@@ -26,12 +26,10 @@ def get_pathes(filter_list):
 
     ## group filters
     objs = local_df.groupby(['filename', 'objectNum']).size()
-    df_by_obj = local_df.set_index(['filename', 'objectNum']).sort_index()
 
-    if objs.empty:
-        print(" none")
-    else:
-        print("not none")
+    df_by_obj = df.set_index(['filename', 'objectNum']).sort_index()
+
+
 
     ##return pathes form group
     return df_by_obj, objs
