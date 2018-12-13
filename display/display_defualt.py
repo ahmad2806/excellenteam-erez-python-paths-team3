@@ -11,7 +11,7 @@ class DisplayDefualt(display.Display):
     def display(self, pathes, objs):
         bg = imread(configrations.image_path)
         imshow(bg)
-        for t, n in objs[objs > 50].iteritems():
+        for t, n in objs.iteritems():
             o = pathes.loc[t]
             plt.plot(o.x, o.y, label=n)
         show(block=False)

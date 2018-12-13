@@ -8,6 +8,11 @@ def filter_factory(filter_num):
         filter = time_filter.Time_filter(args[0], args[1], args[2])
         return filter
 
+    if filter_num == 2:
+        args = input("insert : [x1] [y1] [x2] [y2] : date format YYYY-MM-DD(0 for all dates)\n").split()
+        filter = random_patch_filter.RandomPatch(int(args[0]), int(args[1]), int(args[2]), int(args[3]))
+        return filter
+
 
 def get_filters(filters):
     filter_list = []

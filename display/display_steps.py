@@ -10,9 +10,7 @@ class DisplaySteps(display.Display):
 
     def display(self, pathes, objs):
         bg = imread(configrations.image_path)
-        count = 0
-        for t, n in objs[objs > 50].iteritems():
-            count += 1
+        for t, n in objs.iteritems():
             imshow(bg)
             o = pathes.loc[t]
             plt.plot(o.x, o.y, label=n)
