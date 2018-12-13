@@ -4,7 +4,7 @@ import filter.filters_types.time_filer as time_filter
 
 def filter_factory(filter_num):
     if filter_num == 1:
-        args = input("insert : fromHour toHour date\ndate format YYYY-MM-DD(0 for all dates)\n").split()
+        args = input("insert : [from Hour] [to Hour] [date] : date format YYYY-MM-DD(0 for all dates)\n").split()
         filter = time_filter.Time_filter(args[0], args[1], args[2])
         return filter
 

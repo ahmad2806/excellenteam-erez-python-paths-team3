@@ -5,11 +5,13 @@ import sys
 
 
 def get_command():
+    """function gets commands from user and parse it"""
     user_command = input("enter your command\n")
     return p.parse(user_command)
 
 
 def run(m_command):
+    """function that runs a command"""
     command_handler.run_command(m_command)
     pass
 

@@ -6,7 +6,7 @@ import configrations
 g_filters = []
 
 
-def create_filters():
+def choose_filters():
     global g_filters
     filters = input(f"insert filters: {configrations.filters}").split(",")
     g_filters = filter_handler.get_filters(filters)
@@ -20,16 +20,11 @@ def display_filters():
         filter.print()
 
     print("filter display finished\n")
-    while(1):
+    while (1):
         q = input("filter press q to exit\n")
         if q == "q":
             break
 
 
-
 def change_filter():
-    return None
-
-
-def set_mode():
-    return None
+    pass

@@ -1,7 +1,7 @@
 commands = """
-    For creating a new filter enter : 1
-    For displaying filters enter :    2
-    For changing filters enter :      3
+    For choosing a new filter enter : 1
+    For changing filters enter :      2
+    For displaying filters enter :    3
     To stop the program enter:        4
 """
 
