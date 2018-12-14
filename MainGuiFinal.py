@@ -1,18 +1,12 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'MainGui.ui'
+# Form implementation generated from reading ui file 'MainGuiFinal.ui'
 #
 # Created by: PyQt5 UI code generator 5.11.3
 #
 # WARNING! All changes made in this file will be lost!
-
+from gui import user_input_data
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton
-from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import pyqtSlot
-
-
 
 class Ui_MainGui(object):
     def setupUi(self, MainGui):
@@ -66,13 +60,13 @@ class Ui_MainGui(object):
         self.label_5.setGeometry(QtCore.QRect(70, 130, 68, 19))
         self.label_5.setObjectName("label_5")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(410, 320, 112, 34))
+        self.pushButton.setGeometry(QtCore.QRect(260, 490, 112, 34))
         self.pushButton.setObjectName("pushButton")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(590, 320, 112, 34))
+        self.pushButton_2.setGeometry(QtCore.QRect(430, 490, 112, 34))
         self.pushButton_2.setObjectName("pushButton_2")
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(590, 390, 112, 34))
+        self.pushButton_3.setGeometry(QtCore.QRect(600, 490, 112, 34))
         self.pushButton_3.setObjectName("pushButton_3")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         self.label_6.setGeometry(QtCore.QRect(50, 350, 251, 61))
@@ -89,6 +83,38 @@ class Ui_MainGui(object):
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit.setGeometry(QtCore.QRect(50, 420, 211, 31))
         self.lineEdit.setObjectName("lineEdit")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_2.setGeometry(QtCore.QRect(480, 260, 141, 25))
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.label_7 = QtWidgets.QLabel(self.centralwidget)
+        self.label_7.setGeometry(QtCore.QRect(420, 260, 68, 19))
+        self.label_7.setObjectName("label_7")
+        self.toolButton = QtWidgets.QToolButton(self.centralwidget)
+        self.toolButton.setGeometry(QtCore.QRect(620, 260, 32, 25))
+        self.toolButton.setObjectName("toolButton")
+        self.label_8 = QtWidgets.QLabel(self.centralwidget)
+        self.label_8.setGeometry(QtCore.QRect(420, 320, 51, 31))
+        self.label_8.setObjectName("label_8")
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_3.setGeometry(QtCore.QRect(480, 320, 141, 25))
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.toolButton_2 = QtWidgets.QToolButton(self.centralwidget)
+        self.toolButton_2.setGeometry(QtCore.QRect(620, 320, 32, 25))
+        self.toolButton_2.setObjectName("toolButton_2")
+        self.label_9 = QtWidgets.QLabel(self.centralwidget)
+        self.label_9.setGeometry(QtCore.QRect(430, 360, 241, 41))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setItalic(True)
+        font.setUnderline(True)
+        font.setWeight(75)
+        font.setStrikeOut(False)
+        self.label_9.setFont(font)
+        self.label_9.setObjectName("label_9")
+        self.lineEdit_4 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_4.setGeometry(QtCore.QRect(430, 420, 221, 31))
+        self.lineEdit_4.setObjectName("lineEdit_4")
         MainGui.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainGui)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 782, 31))
@@ -100,6 +126,7 @@ class Ui_MainGui(object):
 
         self.retranslateUi(MainGui)
         QtCore.QMetaObject.connectSlotsByName(MainGui)
+
 
     def on_click1(self):
         print("Button ok pressed")
@@ -113,13 +140,16 @@ class Ui_MainGui(object):
         print(f'the user press single path : {single_path}')
         print(f'the user press all paths : {all_path}')
 
+        user_input_data.dic_user_input["command"]=""
+        user_input_data.dic_user_input["filters"]=""
+        user_input_data.dic_user_input["filters_args"]=""
+        user_input_data.dic_user_input["mode"]=""
+
+
     def on_click2(self):
-        print("Button reset pressed ")
+        print("\nButton reset pressed ")
         self.lineEdit.setText("")
-        single_path_r = self.radioButton.setChecked(False)
-        all_path_r = self.radioButton_2.setChecked(False)
-        print(f'single path reseted: {single_path_r}')
-        print(f'all path reseted: {all_path_r}')
+        self.lineEdit_4.setText("")
 
 
     def retranslateUi(self, MainGui):
@@ -143,7 +173,12 @@ class Ui_MainGui(object):
 
         self.label_6.setText(_translate("MainGui", "Enter Box# To Display :"))
         self.lineEdit.setPlaceholderText(_translate("MainGui", "1,2,3,...20"))
-
+        self.label_7.setText(_translate("MainGui", "Photo :"))
+        self.toolButton.setText(_translate("MainGui", "..."))
+        self.label_8.setText(_translate("MainGui", "File :"))
+        self.toolButton_2.setText(_translate("MainGui", "..."))
+        self.label_9.setText(_translate("MainGui", "Enter Box Coordinate :"))
+        self.lineEdit_4.setPlaceholderText(_translate("MainGui", "100,100,100,100"))
 
 
 if __name__ == "__main__":
