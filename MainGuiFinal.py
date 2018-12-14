@@ -135,10 +135,12 @@ class Ui_MainGui(object):
         end_time = self.timeEdit_2.text()
         single_path = self.radioButton.isChecked()
         all_path = self.radioButton_2.isChecked()
+        box_cord = self.lineEdit_4.text()
         print(f'the user insert boxes #: {box_number}')
         print(f'the user insert start time : {start_time} to {end_time}')
         print(f'the user press single path : {single_path}')
         print(f'the user press all paths : {all_path}')
+        print(f'the box coordinate is  : {box_cord}')
 
         user_input_data.dic_user_input["command"]=""
         user_input_data.dic_user_input["filters"]=""
