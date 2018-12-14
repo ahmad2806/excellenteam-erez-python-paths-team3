@@ -102,8 +102,24 @@ class Ui_MainGui(object):
         QtCore.QMetaObject.connectSlotsByName(MainGui)
 
     def on_click1(self):
-        print("helloo theree")
+        print("Button ok pressed")
+        box_number = self.lineEdit.text()
+        start_time = self.timeEdit.text()
+        end_time = self.timeEdit_2.text()
+        single_path = self.radioButton.isChecked()
+        all_path = self.radioButton_2.isChecked()
+        print(f'the user insert boxes #: {box_number}')
+        print(f'the user insert start time : {start_time} to {end_time}')
+        print(f'the user press single path : {single_path}')
+        print(f'the user press all paths : {all_path}')
 
+    def on_click2(self):
+        print("Button reset pressed ")
+        self.lineEdit.setText("")
+        single_path_r = self.radioButton.setChecked(False)
+        all_path_r = self.radioButton_2.setChecked(False)
+        print(f'single path reseted: {single_path_r}')
+        print(f'all path reseted: {all_path_r}')
 
 
     def retranslateUi(self, MainGui):
@@ -122,6 +138,9 @@ class Ui_MainGui(object):
 
         self.pushButton_2.setText(_translate("MainGui", "Cancel"))
         self.pushButton_3.setText(_translate("MainGui", "Reset"))
+
+        self.pushButton_3.clicked.connect(self.on_click2)
+
         self.label_6.setText(_translate("MainGui", "Enter Box# To Display :"))
         self.lineEdit.setPlaceholderText(_translate("MainGui", "1,2,3,...20"))
 
