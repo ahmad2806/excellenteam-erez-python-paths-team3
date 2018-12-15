@@ -15,6 +15,6 @@ threads_number = ""
 
 chunck = ""
 
-image_path = None
+image_path = "/Users/odaiodeh/Downloads/paths0.png"
 
 file_path = None

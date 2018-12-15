@@ -2,11 +2,14 @@ from m_parser import parse_command as p
 import command_handler
 import configrations
 import sys
+from gui import user_input_data
+
 
 
 def get_command():
     """function gets commands from user and parse it"""
     user_command = input("enter your command\n")
+    # user_command = user_input_data.get_command()
     return p.parse(user_command)
 
 

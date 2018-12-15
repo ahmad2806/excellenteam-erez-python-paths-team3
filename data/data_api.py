@@ -29,7 +29,5 @@ def get_pathes(filter_list):
 
     df_by_obj = df.set_index(['filename', 'objectNum']).sort_index()
 
-
-
     ##return pathes form group
     return df_by_obj, objs
