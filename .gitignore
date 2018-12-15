@@ -1,2 +1,5 @@
 .idea/
 __pycache__/
+testing
+.ipynb_checkpoints/
+Untitled.ipynb
